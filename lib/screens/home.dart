@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _currentindex = 0;
+  int _currentindex = 2;
   List<Widget> _totalPage = [NFC(), Report(), Profile()];
   void setCurrentindex(int val) {
     setState(() {
@@ -24,7 +24,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _totalPage[_currentindex],
+      backgroundColor: Color(0xff2A2A2A),
+      body: SafeArea(child: _totalPage[_currentindex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentindex,
         onTap: setCurrentindex,
@@ -38,3 +39,10 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
+
+
+
+
+//Bilguun

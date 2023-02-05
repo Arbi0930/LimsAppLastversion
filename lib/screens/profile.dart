@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:limsapp/screens/Login.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -10,10 +10,9 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  bool _islogged = false;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Login"),
-    );
+    return LoginPage();
   }
 }
